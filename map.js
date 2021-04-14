@@ -1,7 +1,7 @@
 // Use the map method to solve these problems!
 
-/*
-Input:
+
+const input =
 
 [
     { name: 'spot', type: 'dog' },
@@ -10,16 +10,14 @@ Input:
     { name: 'einstein', type: 'cat' },
 ]
 
-*/
-
 /*
 Output:
 
 ['spot', 'rover', 'jumpy', 'einstein']
 */
 
-export function makeArrayOfNamesWithMap(arr) {
-    return [];
+export function makeArrayOfNamesWithMap(input) {
+    return input.map(names => names.name);
 }
 
 /*
@@ -32,8 +30,8 @@ Output:
     { name: 'einstein', isHungry: true, type: 'cat' },
 ]*/
 
-export function makeArrayWithIsHungry(arr) {
-    return [];
+export function makeArrayWithIsHungry(array) {
+    
 }
 
 /*
@@ -46,8 +44,11 @@ Output:
     { name: 'EINSTEIN', type: 'cat' },
 ]*/
 
-export function makeShoutingArray(arr) {
-    return [];
+export function makeShoutingArray(array) {
+    return array.map(pet => ({
+       name: pet.name.toUpperCase(),
+       type: pet.type
+    }))
 }
 
 
