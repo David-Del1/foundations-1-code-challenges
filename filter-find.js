@@ -1,7 +1,7 @@
 // Use the filter or find array methods to solve these problems
 
-/* 
-Input:
+ 
+const food = 
 [
     { 
         id: 'apple',
@@ -34,7 +34,7 @@ Input:
         category: 'dairy'
     },
 ]
-
+/*
 Output: 
 [
     { 
@@ -52,8 +52,8 @@ Output:
 ]
 */
 
-export function getAllDairy(arr) {
-    return [];
+export function getAllDairy(food) {
+    return food.filter(item => item.category === 'dairy');
 }
 
 /*
@@ -68,8 +68,8 @@ Output:
 ]
 */
 
-export function getAllFruitsThatCostMoreThanTwo(arr) {
-    return [];
+export function getAllFruitsThatCostMoreThanTwo(food) {
+    return food.filter(item => item.price > 2 && item.category === 'fruit');
 }
 
 
@@ -83,8 +83,8 @@ Output:
     },
 */
 
-export function findTheCheese(arr) {
-    return [];
+export function findTheCheese(food) {
+    return food.find(item => item.id === 'cheese');
 }
 
 
@@ -93,6 +93,8 @@ Output:
 ['apple', 'banana']
 */
 
-export function listNamesOfAllFruits(arr) {
-    return [];
+export function listNamesOfAllFruits(food) {
+    return food
+        .filter(item => item.category === 'fruit')
+        .map(item => item.id);
 }
