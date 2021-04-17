@@ -31,7 +31,12 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(array) {
-    
+    return array.map(item => ({
+        isHungry : true,
+        ...item 
+        // name : item.name,
+        // type  : item.type
+    }));
 }
 
 /*
@@ -59,7 +64,8 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+   //return arr.map(item => item.name + item.type)
+   return arr.map(item => `${item.name}${item.type}`)
 }
 
 /*
@@ -85,5 +91,10 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+   // return arr.map(item => [['name', item.name], ['type', item.type]])
+    return arr.map(item => {
+       return [['name', item.name], ['type', item.type]]
+
+        
+    })
 }
